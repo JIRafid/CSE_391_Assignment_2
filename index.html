@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2: JavaScript Programming</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="quote-box">
+        <p id="quote-text"></p>
+    </div>
+    <div id="color-buttons">
+        <button class="color-btn" style="background-color: #FF6B6B;" onclick="changeQuoteStyle('#FF6B6B')"></button>
+        <button class="color-btn" style="background-color: #4ECDC4;" onclick="changeQuoteStyle('#4ECDC4')"></button>
+        <button class="color-btn" style="background-color: #45B7D1;" onclick="changeQuoteStyle('#45B7D1')"></button>
+        <button class="color-btn" style="background-color: #FDCB6E;" onclick="changeQuoteStyle('#FDCB6E')"></button>
+    </div>
+
+    <div class="converter">
+        <input type="number" id="inputValue" placeholder="Enter value">
+        <select id="convertType">
+            <option value="kg-to-lbs">Kilograms to Pounds</option>
+            <option value="lbs-to-kg">Pounds to Kilograms</option>
+        </select>
+        <button onclick="convert()">Convert</button>
+        <p>Result: <span id="result"></span></p>
+    </div>
+
+    <div class="analysis-container">
+        <h2>Number Series Analysis</h2>
+        <input type="text" id="numberInput" placeholder="Enter numbers separated by comma">
+        <button onclick="analyzeNumbers()">Analyze</button>
+        
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Series</th>
+                    <th>Max</th>
+                    <th>Min</th>
+                    <th>Sum</th>
+                    <th>Average</th>
+                    <th>Reverse Order</th>
+                </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+        </table>
+    </div>
+
+    <textarea id="textArea" placeholder="Enter your text here..."></textarea>
+    <div class="button-group">
+        <button onclick="clearAll()">Clear All</button>
+        <button onclick="toggleCapitalize()">Capitalize</button>
+        <button onclick="sortText()">Sort</button>
+        <button onclick="reverseLines()">Reverse</button>
+        <button onclick="stripBlank()">Strip Blank</button>
+        <button onclick="addNumbers()">Add Numbers</button>
+        <button onclick="shuffleLines()">Shuffle</button>
+    </div>
+</body>
+</html>
