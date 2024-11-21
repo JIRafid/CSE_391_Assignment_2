@@ -1,60 +1,154 @@
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
     margin: 0;
-    padding: 20px;
-    background-image: url("images/exp-bg1.png");
-    background-repeat: no-repeat;
-    background-position: left;
-    background-color: azure;
+    padding: 0;
+    color: #333;
 }
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border: 4px solid;
-    border-image: linear-gradient(180deg, blue, cyan);
-    border-image-slice: 1;
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4a90e2;
+    margin-top: 20px;
+}
+
+.quote-container {
+    background-color: #f9f9f9;
+    border: 2px solid #4a90e2;
     border-radius: 10px;
-    box-shadow: 10px 10px 40px gray;
+    padding: 20px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
 }
-textarea {
-    width: 100%;
-    min-height: 300px;
-    margin-bottom: 15px;
-    border: 2px solid #4ECDC4;
-    border-radius: 5px;
-    padding: 10px;
-    font-family: "Poppins", sans-serif;
+
+.quote-container:hover {
+    transform: scale(1.02);
 }
-.button-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-button {
-    background-image: linear-gradient(45deg, lightSalmon, tomato);
-    color: antiquewhite;
+
+.color-buttons button {
+    margin: 5px;
+    padding: 20px; 
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 0; 
     cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    transition: transform 0.2s;
+    font-size: 1em;
+    transition: transform 0.2s ease;
+    width: 50px; 
+    height: 50px; 
 }
-button:hover {
+
+.color-buttons button:hover {
+    transform: scale(1.1);
+}
+
+.color-buttons button:nth-child(1) {
+    background-color: red;
+}
+
+.color-buttons button:nth-child(2) {
+    background-color: blue;
+}
+
+.color-buttons button:nth-child(3) {
+    background-color: green;
+}
+
+.color-buttons button:nth-child(4) {
+    background-color: purple;
+}
+
+.hero-converter {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-converter input, .hero-converter select, .hero-converter button {
+    margin: 10px 5px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero-converter input:focus, .hero-converter select:focus, .hero-converter button:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.hero-converter button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-converter button:hover {
+    background-color: #357ABD;
     transform: scale(1.05);
 }
-@media screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-        margin: 10px auto;
-    }
-    .button-group {
-        flex-direction: column;
-    }
-    button {
-        width: 100%;
-    }
+
+.number-series {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    width: 60%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.number-series input {
+    margin: 10px 5px;
+    padding: 10px;
+    width: 60%;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.number-series input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.number-series button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.number-series button:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 258px;
+    padding: 2px 0;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }

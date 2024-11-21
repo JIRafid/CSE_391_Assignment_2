@@ -3,60 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 2: JavaScript Programming</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <title>Assignment 2</title>
 </head>
 <body>
-    <div id="quote-box">
-        <p id="quote-text"></p>
-    </div>
-    <div id="color-buttons">
-        <button class="color-btn" style="background-color: #FF6B6B;" onclick="changeQuoteStyle('#FF6B6B')"></button>
-        <button class="color-btn" style="background-color: #4ECDC4;" onclick="changeQuoteStyle('#4ECDC4')"></button>
-        <button class="color-btn" style="background-color: #45B7D1;" onclick="changeQuoteStyle('#45B7D1')"></button>
-        <button class="color-btn" style="background-color: #FDCB6E;" onclick="changeQuoteStyle('#FDCB6E')"></button>
+    <h1>JavaScript Programming</h1>
+
+    <div class="quote-container">
+        <p id="quote-box">Welcome to the random quote generator!</p>
+        <div class="color-buttons">
+            <button onclick="changeBoxColor('red')"></button>
+            <button onclick="changeBoxColor('blue')"></button>
+            <button onclick="changeBoxColor('green')"></button>
+            <button onclick="changeBoxColor('purple')"></button>
+        </div>
     </div>
 
-    <div class="converter">
-        <input type="number" id="inputValue" placeholder="Enter value">
-        <select id="convertType">
+    <div class="hero-converter">
+        <input type="text" id="inputValue" placeholder="Enter value">
+        <select id="conversionType">
             <option value="kg-to-lbs">Kilograms to Pounds</option>
             <option value="lbs-to-kg">Pounds to Kilograms</option>
         </select>
         <button onclick="convert()">Convert</button>
-        <p>Result: <span id="result"></span></p>
+        <p id="conversion-result">Result: </p>
     </div>
 
-    <div class="analysis-container">
-        <h2>Number Series Analysis</h2>
-        <input type="text" id="numberInput" placeholder="Enter numbers separated by comma">
-        <button onclick="analyzeNumbers()">Analyze</button>
-        
-        <table id="resultsTable">
-            <thead>
-                <tr>
-                    <th>Series</th>
-                    <th>Max</th>
-                    <th>Min</th>
-                    <th>Sum</th>
-                    <th>Average</th>
-                    <th>Reverse Order</th>
-                </tr>
-            </thead>
-            <tbody id="resultsBody"></tbody>
-        </table>
+    <div class="number-series">
+        <input type="text" id="seriesInput" placeholder="Enter numbers separated by commas">
+        <button onclick="processSeries()">Calculate</button>
+        <p id="series-result">Results: </p>
     </div>
 
-    <textarea id="textArea" placeholder="Enter your text here..."></textarea>
-    <div class="button-group">
-        <button onclick="clearAll()">Clear All</button>
-        <button onclick="toggleCapitalize()">Capitalize</button>
-        <button onclick="sortText()">Sort</button>
-        <button onclick="reverseLines()">Reverse</button>
-        <button onclick="stripBlank()">Strip Blank</button>
-        <button onclick="addNumbers()">Add Numbers</button>
-        <button onclick="shuffleLines()">Shuffle</button>
-    </div>
+    <footer>
+        <p>&copy; CSE 391: Programming for the Internet</p>
+    </footer>
 </body>
 </html>
