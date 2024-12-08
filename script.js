@@ -37,3 +37,59 @@ function processSeries() {
     const reversed = input.reverse().join(", ");
     document.getElementById("series-result").innerText = `Max: ${max}, Min: ${min}, Sum: ${sum}, Avg: ${avg}, Reversed: ${reversed}`;
 }
+
+function clearAll() {
+    const textArea = document.getElementById('textarea');
+    textArea.value = '';
+  }
+
+let isUpperCase = false;
+function toggleCapitalization() {
+    const textArea = document.getElementById('textarea');
+    const lines = textArea.value.split('\n');
+    textArea.value = lines.map(line => isUpperCase ? line.toLowerCase() : line.toUpperCase()).join('\n');
+    isUpperCase = !isUpperCase;
+}
+  
+function sortLines() {
+    const textArea = document.getElementById('textarea');
+    const lines = textArea.value.split('\n');
+    textArea.value = lines.sort((a, b) => a.localeCompare(b)).join('\n');
+}
+  
+function reverseLines() {
+    const textArea = document.getElementById('textarea');
+    const lines = textArea.value.split('\n');
+    textArea.value = lines.map(line => line.split('').reverse().join('')).join('\n');
+}
+  
+function stripBlankLines() {
+    const textArea = document.getElementById('textarea');
+    const lines = textArea.value.split('\n');
+    textArea.value = lines.map(line => line.trim()).filter(line => line).join('\n');
+}
+  
+function addNumbers() {
+    const textArea = document.getElementById('textarea');
+    const lines = textArea.value.split('\n');
+    textArea.value = lines.map((line, index) => `${index + 1}. ${line}`).join('\n');
+}
+  
+function shuffleLines() {
+    const textArea = document.getElementById('textarea');
+    const lines = textArea.value.split('\n');
+    for (let i = lines.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [lines[i], lines[j]] = [lines[j], lines[i]];
+    }
+    textArea.value = lines.join('\n');
+}
+  
+document.getElementById('clearAll').addEventListener('click', clearAll);
+document.getElementById('capitalize').addEventListener('click', toggleCapitalization);
+document.getElementById('sort').addEventListener('click', sortLines);
+document.getElementById('reverse').addEventListener('click', reverseLines);
+document.getElementById('stripBlank').addEventListener('click', stripBlankLines);
+document.getElementById('addNumbers').addEventListener('click', addNumbers);
+document.getElementById('shuffle').addEventListener('click', shuffleLines);
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Assignment 2</title>
 </head>
 <body>
@@ -35,6 +35,20 @@
         <button onclick="processSeries()">Calculate</button>
         <p id="series-result">Results: </p>
     </div>
+
+    <div class="magic">
+        <textarea id="textarea" placeholder="Enter your text here"></textarea>
+        <div class="button-group">
+            <button id="clearAll">Clear All</button>
+            <button id="capitalize">Capitalize</button>
+            <button id="sort">Sort</button>
+            <button id="reverse">Reverse</button>
+            <button id="stripBlank">Strip Blank</button>
+            <button id="addNumbers">Add Numbers</button>
+            <button id="shuffle">Shuffle</button>
+        </div>
+    </div>
+
 
     <footer>
         <p>&copy; CSE 391: Programming for the Internet</p>
